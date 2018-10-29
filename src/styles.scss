@@ -1,0 +1,93 @@
+/* You can add global styles to this file, and also import other style files */
+$gray-ea: #eaeaea;
+$dark-gold: #8E793E;
+$light-gold: #AD974F;
+$intellectual-grey: #231F20;
+$light-grey: #EAEAEA;
+$classy-gray: #403F45;
+
+img.thumbnail {
+    border: 1px solid $gray-ea;
+    border-radius: 4px;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    &:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+}
+
+div.list-item {
+    display:inline-block;
+    margin: 10px;
+}
+
+.background {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  
+    display: block;
+    background-image: url('assets/background-1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+  
+    -webkit-filter: blur(50px);
+    -moz-filter: blur(50px);
+    -o-filter: blur(50px);
+    -ms-filter: blur(50px);
+    filter: blur(10px) grayscale(1) opacity(.2);
+}
+body {
+    font-family: "futura-pt-bold",'Futura PT',Futura,sans-serif !important;
+    color: $classy-gray;
+}
+html {
+    height: 100%;
+}
+.content {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.line {
+    fill: none;
+    stroke: #ffab00;
+    stroke-width: 3;
+  }
+  
+  .overlay {
+    fill: none;
+    pointer-events: all;
+  }
+  
+  /* Style the dots by assigning a fill and stroke */
+  .dot {
+    fill: #ffab00;
+    stroke: #fff;
+  }
+  
+  .focus circle {
+    fill: none;
+    stroke: steelblue;
+  }
+  
+  div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    height: 28px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+  }
+  
