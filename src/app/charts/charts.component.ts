@@ -22,9 +22,7 @@ export class ChartsComponent implements OnInit {
   n = 21;
   dataset = null;
   svg = null;
-  public div = d3.select('#chart').append('div')
-    .attr('class', 'tooltip')
-    .style('opacity', 0);
+  div = null;
 
   constructor() {}
 
@@ -80,7 +78,7 @@ export class ChartsComponent implements OnInit {
       _this.div.transition()
         .duration(200)
         .style('opacity', .9);
-      _this.div.html(d.y + '<br/>' + d.y)
+      _this.div.html('Value: ' + (d.y).toFixed(2))
         .style('left', (d3.event.pageX) + 'px')
         .style('top', (d3.event.pageY - 28) + 'px');
     })
@@ -124,6 +122,10 @@ export class ChartsComponent implements OnInit {
       .datum(this.dataset) // 10. Binds data to the line
       .attr('class', 'line') // Assign a class for styling
       .attr('d', this.line(this)); // 11. Calls the line generator
+
+    this.div = d3.select('#chart').append('div')
+      .attr('class', 'tooltip')
+      .style('opacity', 0);
 
     this.createDots(this);
   }

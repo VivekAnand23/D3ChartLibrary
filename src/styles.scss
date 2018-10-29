@@ -81,13 +81,13 @@ html {
   div.tooltip {
     position: absolute;
     text-align: center;
-    width: 60px;
-    height: 28px;
-    padding: 2px;
+    width: 100px;
+    height: 16px;
+    padding: 5px;
     font: 12px sans-serif;
     background: lightsteelblue;
-    border: 0px;
-    border-radius: 8px;
+    border: 1px solid $classy-gray;
+    border-radius: 5px;
     pointer-events: none;
   }
   
